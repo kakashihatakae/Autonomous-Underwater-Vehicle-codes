@@ -1,0 +1,16 @@
+<launch> 
+ 
+                        //end of name space 
+
+  <group ns="g500">              //starting namespace
+      <node name="depth_maintain" pkg="robot_codes" type="depth_node" respawn="false" output="screen" />
+  </group>                      //end of name space 
+
+  <group ns="g500">              //starting namespace
+      <node name="thrustCollector" pkg="robot_codes" type="thrust_collector" respawn="false" output="screen" />
+  </group>                      //end of namespace
+
+  <group ns="g500">              //starting namespace
+      <node name="PID_service" pkg="robot_codes" type="PID_srv" respawn="false" output="screen" />
+  </group> 
+</launch>
